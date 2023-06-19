@@ -3,13 +3,16 @@
 
 video_raZer is a web-based system that creates a unique article with screenshots and timestamps based on any YouTube video you specify.
 
+
+Web-системa, которая автоматически на базе указанного видео из YouTube создаст уникальную статью со скриншотами из видео и с таймингом по каждому абзацу.
+
 ## Features
 
 - Automatically generates unique articles.
 - Includes screenshots from the video.
 - Utilizes timestamps to link text to specific parts of the video.
 
-## Authors
+## Authors (INALBE TEAM)
 
 - [@Routybor](https://github.com/Routybor)
 - [@machinee](https://github.com/freeeakn)

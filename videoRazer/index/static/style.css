@@ -17,18 +17,22 @@ body {
     align-items: center;
 }
 
-.logo {
+.header__container {
+    display: flex;
     padding: 2rem;
+    border-bottom: solid 2px #000000;
     font-size: 2rem;
     font-weight: 900;
     letter-spacing: 1rem;
-    transition: .2s;
-    border-bottom: solid 2px #000000;
 }
 
-.logo:hover {
+.header__container a {
+    padding: .2rem;
+    transition: .2s;
+}
+
+.header__container a:hover {
     color: rgba(50, 205, 50, 0.594);
-    border-bottom: solid 3px rgba(50, 205, 50, 0.594);
     transform: scale(1.1);
 }
 
@@ -92,11 +96,16 @@ body {
     transition: .2s;
 }
 
-.footer__container img {
+.footer__container svg {
     height: 35px;
+}
+
+.footer__container a {
+    transition: .2s;
 }
 
 .footer__container a:hover {
     color: rgba(50, 205, 50, 0.594);
+    fill: rgba(50, 205, 50, 0.594);
     transform: scale(1.1);
 }

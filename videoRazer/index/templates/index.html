@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video_raZer</title>
+    <link rel="stylesheet" href="{% static './clear.css' %}">
+    <link rel="stylesheet" href="{% static './style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <a href="https://github.com/freeeakn/video_raZer.git" class="logo">VIDEO RAZER</a>
+    </header>
+    <main class="main">
+        <form action="" method="post" class="main-form">
+            <label class="main-form__item">
+                INPUT VIDEO URL:
+                <input type="url" name="input" id="url-input" placeholder="Input url...">
+                <button id="url-btn">SUBMIT</button>
+            </label>
+        </form>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <a href="https://github.com/freeeakn/video_raZer.git"><img src="{% static './git_icon.svg' %}" alt="git_logo"></a>
+            <a href="https://github.com/freeeakn">freeeakn</a>
+            <a href="https://github.com/Routybor">Routybor</a>
+        </div>
+    </footer>
+</body>
+</html>

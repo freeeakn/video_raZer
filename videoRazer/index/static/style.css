@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;800;900&display=swap');
+
+* {
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 1rem;
+    transition: .2s;
+    border-bottom: solid 2px #000000;
+}
+
+.logo:hover {
+    color: rgba(50, 205, 50, 0.594);
+    border-bottom: solid 3px rgba(50, 205, 50, 0.594);
+    transform: scale(1.1);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-form {
+    margin: 5rem;
+    padding: 5rem;
+}
+
+.main-form__item {
+    display: flex;
+    align-items: center;
+}
+
+#url-input {
+    color: black;
+    height: 2rem;
+    width: 15rem;
+    text-indent: .2rem;
+    border: 2px solid black;
+    border-radius: .5rem;
+    margin: 0 1rem;
+}
+
+#url-btn {
+    color: black;
+    background: #fffefe00;
+    padding: 0 2rem;
+    height: 2rem;
+    text-indent: .2rem;
+    border: 2px solid black;
+    border-radius: .5rem;
+    transition: .2s;
+}
+
+#url-btn:hover {
+    background: #000000;
+    color: rgb(255, 255, 255);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.footer__container {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-top: solid 2px #000000;
+    transition: .2s;
+}
+
+.footer__container img {
+    height: 35px;
+}
+
+.footer__container a:hover {
+    color: rgba(50, 205, 50, 0.594);
+    transform: scale(1.1);
+}

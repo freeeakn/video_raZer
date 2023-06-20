@@ -3,12 +3,7 @@
 </script>
 
 <template>
-    <div class="bg-gray-900 text-white flex flex-col justify-around h-screen w-screen">
-        <AppHeader />
-        <AppForm />
-        <!-- <AppPopUp /> -->
-        <AppFooter />
-    </div>
+    <RouterView />
 </template>
 
 <style>

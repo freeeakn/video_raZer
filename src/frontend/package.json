@@ -8,9 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "apollo": "^2.34.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "vite": "^4.3.9"
   }

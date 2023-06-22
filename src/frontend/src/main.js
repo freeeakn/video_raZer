@@ -9,8 +9,8 @@ import AppFooter from './components/global/AppFooter.vue'
 import AppForm from './components/global/AppForm.vue'
 import AppPopUp from './components/global/AppPopUp.vue'
 import AppAnswer from './components/global/AppAnswer.vue'
+import AppLoad from './components/global/AppLoad.vue'
 
-axios.defaults.baseURL = 'http://127.0.0.1:8000';
 
 const app = createApp(App);
 
@@ -22,5 +22,6 @@ app
     .component('AppForm', AppForm)
     .component('AppPopUp', AppPopUp)
     .component('AppAnswer', AppAnswer)
+    .component('AppLoad', AppLoad)
 
 app.mount('#app');

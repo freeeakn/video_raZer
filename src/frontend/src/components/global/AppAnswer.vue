@@ -3,7 +3,7 @@
 
 <template>
     <main class="flex flex-col items-center justify-center p-5">
-        <div class="m-2 p-2 xl:w-1/2">
+        <div class="m-2 p-2 xl:w-1/2 drop-shadow-[0_20px_20px_rgb(163_230_53_/_0.15)]">
             <section  class="mb-16">
                 <img class="w-full mb-5" src="https://randompicturegenerator.com/img/national-park-generator/gebf2d43a7afe4f731303406b059dd0aeed652937b8880225bbaf7c8b064374526b88012f8f26cc7883954cebc4f02996_640.jpg" alt="screenShot">
                 <a href="#">Timing</a>

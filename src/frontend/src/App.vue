@@ -11,4 +11,21 @@
 * {
     font-family: 'Mulish', sans-serif;
 }
+
+.animation {
+  transform: scale(0.75);
+  opacity: 0;
+  animation: ani 1s forwards;
+}
+
+@keyframes ani {
+  0% {
+    transform: scale(0.75);
+    opacity: 0;
+}
+  100% {
+    opacity: 1;
+    transform: scale(1);
+}
+}
 </style>

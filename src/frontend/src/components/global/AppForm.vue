@@ -18,7 +18,7 @@ const formSubmit = () => {
     submit.value = true;
     try {
         setTimeout(routerFunc, 3000);
-        axios.post('answer/', data);
+        axios.get('answer/', data);
     } catch (err) {
         console.error(err.toJSON());
     }

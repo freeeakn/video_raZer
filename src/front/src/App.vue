@@ -1,6 +1,7 @@
 <script setup>
 import Header from "./components/Header.vue"
 import Footer from "./components/Footer.vue"
+import AppLoad from "./components/AppLoad.vue"
 import { ref } from 'vue'
 import axios from 'axios'
 

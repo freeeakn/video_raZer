@@ -2,12 +2,13 @@
 import Header from "./components/Header.vue"
 import Footer from "./components/Footer.vue"
 import AppLoad from "./components/AppLoad.vue"
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import axios from 'axios'
 
 const submit = ref(false);
+const output = ref(false);
 const url = ref('');
-const answer = ref('');
+const answer = reactive({});
 
 const formSubmit = () => {
 
@@ -17,13 +18,16 @@ const formSubmit = () => {
     
     submit.value = true;
     try {
-        setTimeout(routerFunc, 3000);
+      setTimeout(() => {
+          output.value = true;
+          submit.value = false;
+        }, 3000);
         axios.post('api/', data)
             .then(response => {
-              answer.value = JSON.stringify(response, null, 2)
+              answer = response
             })
             .catch(error => {
-              answer.value = 'Error: ' + error.response.status
+              answer = {err: 'Error: ' + error.response.status}
             })
     } catch (err) {
         console.error(err.toJSON());
@@ -36,7 +40,7 @@ const formSubmit = () => {
         <div class="animation flex flex-col justify-around h-screen w-full">
           <Header />
           <main class="flex justify-center items-center">
-              <form @submit.prevent.stop="formSubmit" class="m-5 p-5" v-if="!submit">
+              <form @submit.prevent.stop="formSubmit" class="m-5 p-5" v-if="(!output && !submit)">
                   <div class="flex flex-col">
                       <label for="default-input" class="block mb-2 font-medium">Input url:</label>
                       <input v-model="url" placeholder="VideoUrl..." type="url" name="url" class="bg-white text-gray-900 text-sm rounded-xl ring-4 focus:ring-lime-400  block p-2 w-72 drop-shadow-[0_35px_35px_rgb(163_230_53_/_0.09)]">
@@ -47,22 +51,25 @@ const formSubmit = () => {
               </div>
           </main>
 
-          <!-- <main class="flex flex-col items-center justify-center p-5">
+          <main class="flex flex-col items-center justify-center p-5" v-if="output">
               <div class="m-2 p-2 xl:w-1/2 drop-shadow-[0_20px_20px_rgb(163_230_53_/_0.15)]">
                   <section  class="mb-16">
                       <img class="w-full mb-5" src="https://randompicturegenerator.com/img/national-park-generator/gebf2d43a7afe4f731303406b059dd0aeed652937b8880225bbaf7c8b064374526b88012f8f26cc7883954cebc4f02996_640.jpg" alt="screenShot">
-                      <a href="#">{{ start }}</a>
+                      <a href="#">{{ answer.start }}</a>
                       <p>
-                          {{ text }}
+                          {{ answer.text }}
                       </p>
                   </section>
               </div>
-              <router-link to="/">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
-              </svg>
-              </router-link>
-          </main> -->
+              <button @click="() => {
+                output = false;
+                submit = false;
+              }">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+                </svg>
+              </button>
+          </main>
 
           <Footer />
         </div>
